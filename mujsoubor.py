@@ -45,8 +45,19 @@ def pridat_recept():
     return novy_recept
 
 
-# Seznam receptů
-recepty = []
+# Výchozí recept
+ingredience_testoviny = [
+    Ingredience("těstoviny", 100, "g"),
+    Ingredience("rajčata", 150, "g"),
+    Ingredience("sýr", 50, "g"),
+    Ingredience("česnek", 1, "stroužek"),
+    Ingredience("olivový olej", 10, "ml"),
+    Ingredience("sůl", 1, "špetka")
+]
+vychozi_recept = Recept("Těstoviny s rajčaty", 20, ingredience_testoviny)
+
+# Seznam receptů s výchozím receptem
+recepty = [vychozi_recept]
 
 # Hlavní program
 print("Vítejte v programu pro správu receptů!")
